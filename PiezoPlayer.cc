@@ -1,6 +1,10 @@
 #include <Arduino.h>
 #include "PiezoPlayer.h"
 
+PiezoPlayer::PiezoPlayer(int pin){
+  this-> pin = pin;
+}
+
 // start playing first note & store first timer
 void PiezoPlayer::setup() {
   lastChangeOfNote = millis();

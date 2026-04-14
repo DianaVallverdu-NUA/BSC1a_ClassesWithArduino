@@ -1,7 +1,7 @@
 #include "PiezoPlayer.h"
 #include "LEDManager.h"
 
-PiezoPlayer player;
+PiezoPlayer player = PiezoPlayer(7);
 LEDManager redLed =  LEDManager(8, 1000);
 LEDManager greenLed = LEDManager(9, 500);
 
