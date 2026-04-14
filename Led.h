@@ -1,7 +1,7 @@
-class LEDManager {
+class Led {
 public:
   // constructor
-  LEDManager(int pin, int interval);
+  Led(int pin, int interval);
 
   // setup & loop should be called in the setup & loop sections of the main .ino file
   void setup(int currentTime);
