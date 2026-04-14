@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include "LEDManager.h"
 
-void LEDManager::LEDManager(int pin, int interval) {
+LEDManager::LEDManager(int pin, int interval) {
   this->pin = pin;
   this->interval = interval;
 }
