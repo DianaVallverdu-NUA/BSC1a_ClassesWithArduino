@@ -6,13 +6,19 @@ LEDManager redLed =  LEDManager(8, 1000);
 LEDManager greenLed = LEDManager(9, 500);
 
 void setup() {
-  player.setup();
-  redLed.setup();
-  greenLed.setup();
+
+  int currentTime = millis();
+
+  player.setup(currentTime);
+  redLed.setup(currentTime);
+  greenLed.setup(currentTime);
 }
 
 void loop() {
-  player.loop();
-  redLed.loop();
-  greenLed.loop();
+
+  int currentTime = millis();
+
+  player.loop(currentTime);
+  redLed.loop(currentTime);
+  greenLed.loop(currentTime);
 }

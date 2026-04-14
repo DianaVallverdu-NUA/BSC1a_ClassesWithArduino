@@ -6,17 +6,15 @@ PiezoPlayer::PiezoPlayer(int pin){
 }
 
 // start playing first note & store first timer
-void PiezoPlayer::setup() {
-  lastChangeOfNote = millis();
+void PiezoPlayer::setup(int currentTime) {
+  lastChangeOfNote = currentTime;
   tone(pin, melody[currentNote], durations[currentNote]);
 }
 
 // check if next node should be played
 // yes -> play it & update current note info
 // no -> do nothing
-void PiezoPlayer::loop() {
-  int currentTime = millis();
-
+void PiezoPlayer::loop(int currentTime) {
   if (currentTime - lastChangeOfNote >= durations[currentNote]) {
     currentNote++;
     lastChangeOfNote = currentTime;

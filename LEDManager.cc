@@ -6,16 +6,15 @@ LEDManager::LEDManager(int pin, int interval) {
   this->interval = interval;
 }
 
-void LEDManager::setup() {
+void LEDManager::setup(int currentTime) {
 
   pinMode(pin, OUTPUT);
 
-  lastChangeOfState = millis();
+  lastChangeOfState = currentTime;
   digitalWrite(pin, HIGH);
 }
 
-void LEDManager::loop() {
-  int currentTime = millis();
+void LEDManager::loop(int currentTime) {
   if (currentTime - this->lastChangeOfState > this->interval) {
     this->lastChangeOfState = currentTime;
     bool currentState = digitalRead(this->pin);

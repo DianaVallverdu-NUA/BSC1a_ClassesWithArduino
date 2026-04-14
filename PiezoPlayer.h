@@ -6,8 +6,8 @@ public:
   PiezoPlayer(int pin);
 
   // setup & loop should be called in the setup & loop sections of the main .ino file
-  void setup();
-  void loop();
+  void setup(int currentTime);
+  void loop(int currentTime);
 
 private:
 
